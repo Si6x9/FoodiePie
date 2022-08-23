@@ -1,0 +1,282 @@
+/* CSS Reset */
+* { 
+    margin: 0%;
+    padding: 0%;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Variables */
+:root {
+    --navbar-height: 50px;
+}
+
+/* Navigationbar */
+#navbar {
+    position: sticky;
+    top: 0%;
+    display: flex;
+    align-items: center;
+}
+
+#navbar::before {
+    content: "";
+
+    background-color: #000000;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Navigationbar: Logo and images */
+#logo {
+    margin: 0px 35px;
+}
+
+#logo img {
+    width: 70px;
+    height: 66px;
+    padding: 5px 0px;
+    margin: 4px 0;
+    margin-right: 7px;
+    margin-left: 30px;
+}
+
+/* Navigationbar: List items */
+#navbar ul {
+    display: flex;
+}
+
+#navbar ul .items {
+    
+    font-family: 'Ubuntu', sans-serif;
+    margin: 7px 20px;
+    list-style: none;
+    font-size: 28px;
+
+
+}
+
+#navbar ul .items a {
+    font-weight: bolder;
+    padding: 4px 7px;
+    display: block;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    transition: transform .4s ease-in;
+    
+}
+
+#navbar ul .items a:hover {
+    /* padding: 13px 15px; */
+    display: block;
+    opacity: .7;
+    transform: scale(1.08);
+    /* border-radius: 12px; */
+    /* text-decoration: none; */
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+
+}
+
+/* Home Section */
+#home {
+    height: 461px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 200px;
+    /* transition: transform 8s ease-in-out;
+    transform: translateZ(2) ; */
+}
+
+#home::before {
+    content: "";
+
+    background: url("bg2.jpg") no-repeat center center/cover;
+    opacity: 0.88;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 556px;
+    width: 100%;
+    z-index: -1;
+}
+
+#home .h-primary {
+    color: white;
+}
+
+#home .h-p {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Services-container Section */
+#services {
+    display: flex;
+    margin: 34px;
+}
+
+#services .box {
+    /* overflow: hidden; */
+    border-radius: 49px;
+    border: 2px solid red;
+    padding: 10px;
+    background-color: #e4e4e4;
+    margin: 2px 17px;
+    
+}
+
+#services .box img {
+    margin: auto;
+    height: 150px;
+    cursor: pointer;
+    display: block;
+    transition: transform 1s ease-out;
+}
+#services .box img:hover {
+    transform: scale(1.2);
+}
+
+#services .box p {
+    font-size: 1.9rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+#client-section {
+    position: relative;
+    height: 405px;
+    z-index: -1;
+
+}
+
+
+
+#client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-items img {
+    
+    height: 150px;
+}
+
+
+.client-items {
+    /* padding: 10px 47px; */
+    margin: auto;
+}
+
+.client-items{
+    
+    cursor: pointer;
+}
+#client-section::before{
+    content: "";
+    background-image: url(../contact2.jpg) ;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    z-index: -1;
+
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+ z-index: -1;    
+}
+#contact::before{
+    content: "";
+    background: url(../contact1.png) ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .4 ;
+}
+
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+#contact-box input,#contact-box textarea{
+    font-weight: 600;
+    background-color: #cfbca5;
+    font-size: 23px;
+    width: 100%;
+    padding: 0px 19px;
+    border-radius: 27px;
+    color: #000000;
+}
+#contact-box form{
+    width: 50%;
+}
+#contact-box label{
+    font-size: 1rem;
+
+}
+#contact-box label{
+    font-size: 1.3rem;
+
+    
+}
+
+/* Utility class */
+.h-primary {
+    font-size: 7rem;
+    padding: 37px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.box .food-section {
+    font-size: 1.8rem;
+    font-family: 'Roboto Slab', serif;
+    padding: 10px 0px;
+}
+
+.h-secondary {
+    font-family: 'Rubik Moonrocks', cursive;
+    font-family: 'Roboto Slab', serif;
+    font-size: 3rem;
+    padding: 12px;
+    /* font-family: 'Dancing Script', cursive; */
+}
+
+.btn {
+    background-color: #d4a87d;
+    color: #121212;
+    border: 3px solid #ffdd40;
+    padding: 8px 48px;
+    margin: 28px 0px;
+    border-radius: 24px;
+    font-size: 28px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+footer{
+    background-color: #7487a2;
+    color: #1900ff;
+    font-size: 15px;
+    padding: 1px;
+}
